@@ -9,20 +9,23 @@ import { EditComponent } from './pages/edit/edit.component';
 import { GenericFormComponent } from './components/generic-form/generic-form.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
+import { HttpClientModule } from '@angular/common/http';
+
 @NgModule({
   declarations: [
     AppComponent,
     ShowComponent,
     CreateComponent,
     EditComponent,
-    GenericFormComponent
+    GenericFormComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FontAwesomeModule
+    FontAwesomeModule,
+    HttpClientModule,
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}
