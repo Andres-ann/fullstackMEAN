@@ -1,1 +1,30 @@
-<p>generic-form works!</p>
+<form [formGroup]="formProduct" (ngSubmit)="onSubmit()" class="mt-3">
+  <div class="row mb-3">
+    <label class="col-form-label">Description</label>
+    <div class="col-sm-12">
+      <input formControlName="description" type="text" class="form-control" />
+    </div>
+  </div>
+  <div class="row mb-3">
+    <label class="col-form-label">Price</label>
+    <div class="col-sm-12">
+      <input formControlName="price" type="number" class="form-control" />
+    </div>
+  </div>
+  <div class="row mb-3">
+    <label class="col-form-label">Stock</label>
+    <div class="col-sm-12">
+      <input formControlName="stock" type="number" class="form-control" />
+    </div>
+  </div>
+  <div class="btn-group float-end" role="group">
+    <button
+      [disabled]="!formProduct.valid"
+      type="submit"
+      class="btn btn-primary"
+    >
+      Submit
+    </button>
+    <a routerLink="/" class="btn btn-outline-secondary">Cancel</a>
+  </div>
+</form>
